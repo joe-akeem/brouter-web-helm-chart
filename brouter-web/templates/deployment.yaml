@@ -35,7 +35,13 @@ spec:
       initContainers:
         - name: download-profiles
           image: busybox:latest
-          command: [ 'sh', '-c', 'wget -P /profiles2 https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/trekking.brf' ]
+          command:
+            - sh
+            - -c
+            - |
+              {{- range .Values.profileFiles }}
+              wget -P /profiles2 {{ . }}
+              {{- end }}
           volumeMounts:
             - name: profiles2
               mountPath: /profiles2

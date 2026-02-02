@@ -143,6 +143,26 @@ tolerations: []
 
 affinity: {}
 
+# the list of profiles to initially download. Should matche the profiles in the dropdown and those supported by the brouter backend
+profileFiles:
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/trekking.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/river.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/all.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/fastbike-verylowtraffic.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/fastbike.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/gravel.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/hiking-mountain.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/lookups.dat
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/moped.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/mtb.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/rail.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/river.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/shortest.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/softaccess.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/trekking.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/vm-forum-liegerad-schnell.brf
+  - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/vm-forum-velomobil-schnell.brf
+
 config:
   files:
     config.js: |
@@ -188,21 +208,12 @@ config:
           BR.conf.profiles = [
               'trekking',
               'fastbike',
-              'car-eco',
-              'car-fast',
-              'safety',
               'shortest',
-              'trekking-ignore-cr',
-              'trekking-steep',
-              'trekking-noferries',
-              'trekking-nosteps',
               'moped',
               'rail',
               'river',
               'vm-forum-liegerad-schnell',
               'vm-forum-velomobil-schnell',
-              'fastbike-lowtraffic',
-              'fastbike-asia-pacific',
               'hiking-mountain',
           ];
 
