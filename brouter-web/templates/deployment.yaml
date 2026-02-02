@@ -78,6 +78,10 @@ spec:
               subPath: keys.js
             - name: profiles2
               mountPath: /usr/share/nginx/html/profiles2
+            {{- if .Values.locales.enabled }}
+            - name: locales
+              mountPath: /usr/share/nginx/html/dist/locales
+            {{- end }}
       volumes:
         - name: profiles2
           emptyDir: { }
@@ -89,6 +93,11 @@ spec:
                 path: config.js
               - key: keys.js
                 path: keys.js
+        {{- if .Values.locales.enabled }}
+        - name: locales
+          configMap:
+            name: {{ include "brouter-web.fullname" . }}-locales
+        {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

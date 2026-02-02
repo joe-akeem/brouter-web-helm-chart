@@ -1,0 +1,12 @@
+{{- if .Values.locales.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "brouter-web.fullname" . }}-locales
+  labels:
+    {{- include "brouter-web.labels" . | nindent 4 }}
+data:
+  {{- with .Values.locales.files }}
+  {{- toYaml . | nindent 2 }}
+  {{- end }}
+{{- end }}

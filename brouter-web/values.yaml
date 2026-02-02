@@ -163,6 +163,26 @@ profileFiles:
   - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/vm-forum-liegerad-schnell.brf
   - https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/vm-forum-velomobil-schnell.brf
 
+locales:
+  # Set to true to override default locales with custom ones
+  enabled: false
+  # Language files - key is the filename, value is the file content
+  files: {}
+    # Example:
+    # en.json: |
+    #   {
+    #     "about": {
+    #       "bug-reports": "Bug reports and feature requests:"
+    #     }
+    #   }
+    # de.json: |
+    #   {
+    #     "about": {
+    #       "bug-reports": "Fehlerberichte und Funktionsanfragen:"
+    #     }
+  #   }
+
+# allows overriding config.js and key.js
 config:
   files:
     config.js: |
