@@ -1,0 +1,9 @@
+apiVersion: v2
+name: brouter-web
+description: A Helm chart for brouter-web (https://github.com/nrenner/brouter-web)
+
+type: application
+
+version: 0.1.0
+
+appVersion: "0.18.1"
