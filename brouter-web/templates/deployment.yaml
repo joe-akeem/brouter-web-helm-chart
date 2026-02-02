@@ -66,12 +66,12 @@ spec:
       volumes:
         - name: config
           configMap:
-            name: brouter-web-config
+            name: {{ include "brouter-web.fullname" . }}-config
             items:
               - key: config.js
                 path: config.js
               - key: keys.js
-                path: keys.ja
+                path: keys.js
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

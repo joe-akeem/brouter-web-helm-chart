@@ -7,7 +7,9 @@ A Helm chart for deploying [brouter-web](https://github.com/nrenner/brouter-web)
 - kubectl configured to talk to your cluster
 - Helm v3.9+ installed
 - Optional, if using Gateway API `HTTPRoute`: Gateway API CRDs and a compatible controller installed
-- Depends on [BRouter](https://github.com/joe-akeem/brouter-helm-chart) for routing
+- Depends on [BRouter](https://github.com/abrensch/brouter) for routing. When testing with the default configuration,
+  it must be running on http://localhost:17777. There is a [BRouter helm chart](https://github.com/joe-akeem/brouter-helm-chart)
+  which does exactly that per default
 
 ## Chart contents
 - Chart path: `./brouter-web`
