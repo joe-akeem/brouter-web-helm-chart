@@ -4,6 +4,6 @@ description: A Helm chart for brouter-web (https://github.com/nrenner/brouter-we
 
 type: application
 
-version: 0.1.1
+version: 0.2.0
 
 appVersion: "0.18.1"

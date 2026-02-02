@@ -32,6 +32,13 @@ spec:
       securityContext:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      initContainers:
+        - name: download-profiles
+          image: busybox:latest
+          command: [ 'sh', '-c', 'wget -P /profiles2 https://raw.githubusercontent.com/abrensch/brouter/refs/heads/master/misc/profiles2/trekking.brf' ]
+          volumeMounts:
+            - name: profiles2
+              mountPath: /profiles2
       containers:
         - name: {{ .Chart.Name }}
           {{- with .Values.securityContext }}
@@ -63,7 +70,11 @@ spec:
             - name: config
               mountPath: /usr/share/nginx/html/keys.js
               subPath: keys.js
+            - name: profiles2
+              mountPath: /usr/share/nginx/html/profiles2
       volumes:
+        - name: profiles2
+          emptyDir: { }
         - name: config
           configMap:
             name: {{ include "brouter-web.fullname" . }}-config
