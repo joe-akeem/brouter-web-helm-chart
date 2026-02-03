@@ -3,6 +3,16 @@ entries:
   brouter-web:
   - apiVersion: v2
     appVersion: 0.18.1
+    created: "2026-02-03T10:03:47.573349667Z"
+    description: A Helm chart for brouter-web (https://github.com/nrenner/brouter-web)
+    digest: 4345739741722e3da5d9318c372820fb2c43f2256ebcb690f8eb14ae65701c44
+    name: brouter-web
+    type: application
+    urls:
+    - https://github.com/joe-akeem/brouter-web-helm-chart/releases/download/brouter-web-0.3.0/brouter-web-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 0.18.1
     created: "2026-02-02T15:48:52.050703962Z"
     description: A Helm chart for brouter-web (https://github.com/nrenner/brouter-web)
     digest: c887d7c494049e099e56da3046728be81931f28a46a0179d4bd8940364051455
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/joe-akeem/brouter-web-helm-chart/releases/download/brouter-web-0.1.0/brouter-web-0.1.0.tgz
     version: 0.1.0
-generated: "2026-02-02T15:48:52.050710685Z"
+generated: "2026-02-03T10:03:47.573362742Z"
